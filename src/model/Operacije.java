@@ -10,4 +10,13 @@ package model;
  */
 public class Operacije {
     public static final int LOGIN=1;
+    public static final int DODAJRUK=2;
+    public static final int VRATILISTURUK=3;
+    public static final int OBRISIRUK=4;
+    public static final int IZMENIRUK=5;
+
+    
+
+
+
 }
