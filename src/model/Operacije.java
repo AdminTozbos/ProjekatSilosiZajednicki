@@ -14,6 +14,15 @@ public class Operacije {
     public static final int VRATILISTURUK=3;
     public static final int OBRISIRUK=4;
     public static final int IZMENIRUK=5;
+    public static final int VRATIISK=6;
+    public static final int DODAJISK=7;
+    public static final int OBRISIISK=8;
+    public static final int IZMENIISK=9;
+
+
+
+    
+
 
     
 
