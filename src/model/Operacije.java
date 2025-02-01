@@ -22,6 +22,18 @@ public class Operacije {
     public static final int DODAJKUL=11;
     public static final int OBRISIKUL=12;
     public static final int IZMENIKUL=13;
+    public static final int VRATIPRED=14;
+    public static final int DODAJPRED=15;
+    public static final int IZMENIPRED=16;
+    public static final int OBRISIPRED=17;
+    public static final int VRATIGAZ=18;
+    public static final int DODAJGAZ=19;
+    public static final int IZMENIGAZ=20;
+    public static final int OBRISIGAZ=21;
+
+
+
+
 
 
 

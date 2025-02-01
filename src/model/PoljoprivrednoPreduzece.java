@@ -12,13 +12,20 @@ import java.io.Serializable;
  */
 public class PoljoprivrednoPreduzece extends Kooperant implements Serializable{
     private String pravniZastupnik;
-    private int pib;
+    private String pib;
     private String email;
 
     public PoljoprivrednoPreduzece() {
     }
 
-    public PoljoprivrednoPreduzece(String pravniZastupnik, int pib, String email) {
+    public PoljoprivrednoPreduzece(String pravniZastupnik, String pib, String email) {
+        this.pravniZastupnik = pravniZastupnik;
+        this.pib = pib;
+        this.email = email;
+    }
+
+    public PoljoprivrednoPreduzece(String pravniZastupnik, String pib, String email, int idKooperant, String nazivKooperanta, String mesto) {
+        super(idKooperant, nazivKooperanta, mesto);
         this.pravniZastupnik = pravniZastupnik;
         this.pib = pib;
         this.email = email;
@@ -34,11 +41,11 @@ public class PoljoprivrednoPreduzece extends Kooperant implements Serializable{
         this.pravniZastupnik = pravniZastupnik;
     }
 
-    public int getPib() {
+    public String getPib() {
         return pib;
     }
 
-    public void setPib(int pib) {
+    public void setPib(String pib) {
         this.pib = pib;
     }
 

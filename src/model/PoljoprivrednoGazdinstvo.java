@@ -22,6 +22,12 @@ public class PoljoprivrednoGazdinstvo extends Kooperant implements Serializable{
         this.brojTelefona = brojTelefona;
     }
 
+    public PoljoprivrednoGazdinstvo(String vlasnikGaz, String brojTelefona, int idKooperant, String nazivKooperanta, String mesto) {
+        super(idKooperant, nazivKooperanta, mesto);
+        this.vlasnikGaz = vlasnikGaz;
+        this.brojTelefona = brojTelefona;
+    }
+
     public String getVlasnikGaz() {
         return vlasnikGaz;
     }
