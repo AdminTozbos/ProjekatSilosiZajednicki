@@ -18,17 +18,27 @@ public class Potvrda implements Serializable{
     private double ukupanIznos;
     private int idRukovodilac;
     private int idKooperant;
+    private int koopFlag;
 
     public Potvrda() {
     }
 
-    public Potvrda(int idPotvrda, Date datumIzdavanja, Date datumVazenja, double ukupanIznos, int idRukovodilac, int idKooperant) {
+    public Potvrda(int idPotvrda, Date datumIzdavanja, Date datumVazenja, double ukupanIznos, int idRukovodilac, int idKooperant,int koopFlag) {
         this.idPotvrda = idPotvrda;
         this.datumIzdavanja = datumIzdavanja;
         this.datumVazenja = datumVazenja;
         this.ukupanIznos = ukupanIznos;
         this.idRukovodilac = idRukovodilac;
         this.idKooperant = idKooperant;
+        this.koopFlag=koopFlag;
+    }
+
+    public int getKoopFlag() {
+        return koopFlag;
+    }
+
+    public void setKoopFlag(int koopFlag) {
+        this.koopFlag = koopFlag;
     }
 
     public int getIdPotvrda() {

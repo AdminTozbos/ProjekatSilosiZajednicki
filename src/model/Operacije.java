@@ -30,6 +30,14 @@ public class Operacije {
     public static final int DODAJGAZ=19;
     public static final int IZMENIGAZ=20;
     public static final int OBRISIGAZ=21;
+    public static final int VRATIPOT=22;
+    public static final int DODAJPOT=23;
+    public static final int DODAJSTA=24;
+    public static final int OBRISIPOT=25;
+
+
+
+
 
 
 
