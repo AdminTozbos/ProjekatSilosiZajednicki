@@ -34,6 +34,10 @@ public class Operacije {
     public static final int DODAJPOT=23;
     public static final int DODAJSTA=24;
     public static final int OBRISIPOT=25;
+    public static final int VRATISTA=26;
+    public static final int IZMENIPOT=27;
+
+
 
 
 
