@@ -5,13 +5,16 @@
 package model;
 
 import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
 /**
  *
  * @author Miloš
  */
-public class PoljoprivrednaKultura implements Serializable{
+public class PoljoprivrednaKultura implements Serializable,DomainObject<PoljoprivrednaKultura>{
     private int idKultura;
     private String nazivKulture;
     private double cena;
@@ -57,6 +60,55 @@ public class PoljoprivrednaKultura implements Serializable{
 
     public void setMesecZetve(Mesec mesecZetve) {
         this.mesecZetve = mesecZetve;
+    }
+
+    @Override
+    public String getInsertQuery() {
+        return "INSERT INTO kultura (naziv,cena,mesec) VALUES (?,?,?)";
+    }
+
+    @Override
+    public void fillInsertStatement(PreparedStatement ps) throws SQLException {
+            ps.setString(1, nazivKulture);
+            ps.setDouble(2, cena);
+            ps.setString(3, String.valueOf(mesecZetve));
+    }
+
+    @Override
+    public String getUpdateQuery() {
+        return "UPDATE kultura SET naziv=?,cena=?,mesec=? WHERE id=?";
+    }
+
+    @Override
+    public void fillUpdateStatement(PreparedStatement ps) throws SQLException {
+            ps.setString(1, nazivKulture);
+            ps.setDouble(2, cena);
+            ps.setString(3, String.valueOf(mesecZetve));
+            ps.setInt(4, idKultura);
+    }
+
+    @Override
+    public String getDeleteQuery() {
+        return "DELETE FROM kultura WHERE id=?";
+    }
+
+    @Override
+    public void fillDeleteStatement(PreparedStatement ps) throws SQLException {
+        ps.setInt(1, idKultura);
+    }
+
+    @Override
+    public String getSelectQuery() {
+        return "SELECT *FROM kultura";
+    }
+
+    @Override
+    public PoljoprivrednaKultura createFromResultSet(ResultSet rs) throws SQLException {
+                int id=rs.getInt("id");
+                String isk=rs.getString("naziv");
+                Double cena=rs.getDouble("cena");
+                Mesec mesec=Mesec.valueOf(rs.getString("mesec"));
+                return new PoljoprivrednaKultura(id, isk, cena, mesec);
     }
     
 }
