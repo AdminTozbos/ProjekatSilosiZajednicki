@@ -36,6 +36,13 @@ public class Operacije {
     public static final int OBRISIPOT=25;
     public static final int VRATISTA=26;
     public static final int IZMENIPOT=27;
+    public static final int VRATIPRRI=28;
+    public static final int DODAJPRRI=29;
+    public static final int OBRISIPRRI=30;
+    public static final int IZMENIPRRI=31;
+
+
+
 
 
 
