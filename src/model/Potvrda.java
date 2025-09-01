@@ -110,12 +110,19 @@ public class Potvrda implements Serializable,DomainObject<Potvrda>{
 
     @Override
     public String getUpdateQuery() {
-        return null;
+        return "UPDATE potvrda SET datumizdavanja=?,datumvazenja=?,iznos=?,idkooperanta=?,idrukovodioca=?,flag=? WHERE id=?";
     }
 
     @Override
     public void fillUpdateStatement(PreparedStatement ps) throws SQLException {
-        
+            ps.setDate(1,new java.sql.Date(datumIzdavanja.getTime()));
+            ps.setDate(2, new java.sql.Date(datumVazenja.getTime()));
+            ps.setDouble(3, ukupanIznos);
+            ps.setInt(4, idKooperant);
+            ps.setInt(5, idRukovodilac);
+            ps.setInt(6,koopFlag);
+            ps.setInt(7, idPotvrda);
+
     }
 
     @Override

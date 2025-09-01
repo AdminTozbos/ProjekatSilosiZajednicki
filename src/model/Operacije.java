@@ -40,6 +40,11 @@ public class Operacije {
     public static final int DODAJPRRI=29;
     public static final int OBRISIPRRI=30;
     public static final int IZMENIPRRI=31;
+    public static final int VRATIPRIJAVLJENE=32;
+    public static final int LOGOUT=33;
+
+    
+
 
 
 
